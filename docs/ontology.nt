@@ -1,0 +1,872 @@
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://purl.org/dc/terms/created> "2025-05-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://purl.org/dc/terms/creator> "Eric Catalan Benavent"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://purl.org/dc/terms/description> "This is an ontology that describes important factors in the tourism industry in different cities, such as accommodations, prices, important attractions, transportation...\n\nThe purpose of the ontology is to model a large part of the relevant knowledge about tourism. It is expected that the knowledge modeled by this ontology will allow its users to make intelligent recommendations regarding possible tourist adventures. It also aims to provide valuable data that can be processed by companies in the sector and that will allow them to improve their services.\n\nTherefore, the ontology can be used to answer questions such as:\n• What hotels are there in Madrid\n• What attractions are there in Barcelona\n• What day is the Bilbao Carnival\n• What is the price per night of the Hotel Sol"@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://purl.org/dc/terms/issued> "2025-05-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://purl.org/dc/terms/title> "Smart Tourism Advisor Ontology"@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "stao"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://www.w3.org/2000/01/rdf-schema#label> "STAO"@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://www.w3.org/2002/07/owl#priorVersion> "http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates in which city the attraction is located."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> <http://www.w3.org/2000/01/rdf-schema#label> "attractionIsIn"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the company that handles the service."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company> <http://www.w3.org/2000/01/rdf-schema#label> "company"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates in which city the event is held."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> <http://www.w3.org/2000/01/rdf-schema#label> "eventIsIn"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a city to an attraction located within it."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "hasAttraction"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a city to an event held within it."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> <http://www.w3.org/2000/01/rdf-schema#label> "hasEvent"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a city to a hotel located within it."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> <http://www.w3.org/2000/01/rdf-schema#label> "hasHotel"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a city to a restaurant located within it."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "hasRestaurant"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a city to a transport located within it."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> <http://www.w3.org/2000/01/rdf-schema#label> "hasTransport"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates in which city the hotel is located."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> <http://www.w3.org/2000/01/rdf-schema#label> "hotelIsIn"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates in which city the restaurant is located."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> <http://www.w3.org/2000/01/rdf-schema#label> "restaurantIsIn"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the city in which the transport is located."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> <http://www.w3.org/2000/01/rdf-schema#label> "transportIsIn"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName> <http://www.w3.org/2000/01/rdf-schema#comment> "The official name or title of an attraction."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName> <http://www.w3.org/2000/01/rdf-schema#label> "attractionName"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A numeric score for attractions, from 0 to 5."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> <http://www.w3.org/2000/01/rdf-schema#label> "attractionRating"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName> <http://www.w3.org/2000/01/rdf-schema#comment> "The official name or title of a city."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName> <http://www.w3.org/2000/01/rdf-schema#label> "cityName"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date> <http://www.w3.org/2000/01/rdf-schema#comment> "A calendar date related to the entity, formated as YYYY-MM-DD"@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date> <http://www.w3.org/2000/01/rdf-schema#label> "date"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName> <http://www.w3.org/2000/01/rdf-schema#comment> "The official name or title of an event."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName> <http://www.w3.org/2000/01/rdf-schema#label> "eventName"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A numeric score for hotels, from 0 to 5."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> <http://www.w3.org/2000/01/rdf-schema#label> "hotelRating"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location> <http://www.w3.org/2000/01/rdf-schema#domain> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location> <http://www.w3.org/2000/01/rdf-schema#comment> "The latitude and longitude coordinates of a location."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> <http://www.w3.org/2000/01/rdf-schema#comment> "The official name or title of an organization."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> <http://www.w3.org/2000/01/rdf-schema#label> "orgName"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight> <http://www.w3.org/2000/01/rdf-schema#comment> "The cost for each night spent."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight> <http://www.w3.org/2000/01/rdf-schema#label> "pricePerNight"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Average cost of the restaurant."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice> <http://www.w3.org/2000/01/rdf-schema#label> "restaurantAvgPrice"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> <http://www.w3.org/2000/01/rdf-schema#comment> "A numeric score for restaurants, from 0 to 5."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> <http://www.w3.org/2000/01/rdf-schema#label> "restaurantRating"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> <http://www.w3.org/2000/01/rdf-schema#comment> "A star-based rating."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> <http://www.w3.org/2000/01/rdf-schema#label> "stars"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Average cost of the transport."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice> <http://www.w3.org/2000/01/rdf-schema#label> "transportAvgPrice"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant that primarily serves dishes of Andalusian cuisine."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Andalusian Restaurant"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <https://dbpedia.org/page/City> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid3 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A place which draws visitors by providing something of interest or pleasure."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> <http://www.w3.org/2000/01/rdf-schema#label> "Attraction"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A strip of land covered with sand, shingle, or small stones at the edge of a body of water, especially by the sea between high- and low-water marks."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Beach Attraction"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel located near a beach."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Beach Hotel"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Transport service based on a vehicle consisting of two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front wheel."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport> <http://www.w3.org/2000/01/rdf-schema#label> "Bicycle Transport"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Transport service based on a large motor vehicle carrying passengers by road, typically one serving the public on a fixed route and for a fare."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport> <http://www.w3.org/2000/01/rdf-schema#label> "Bus Transport"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel specialized in providing services to travelers on business trips."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Business Hotel"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Cheap hotels, <146 cost of price per night."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Cheap Hotel"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> <http://www.w3.org/2000/01/rdf-schema#comment> "A commercial business."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> <http://www.w3.org/2000/01/rdf-schema#label> "Company"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "An attraction related to the ideas, customs, and social behaviour of a society."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Attraction"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event related to the ideas, customs, and social behaviour of a society."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Event"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://dbpedia.org/page/City> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "A planned public or social occasion."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event related to or using gastronomy."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Gastronomy Event"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Highly rated hotels, rating >4.3." .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel> <http://www.w3.org/2000/01/rdf-schema#label> "High Rated Hotel"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Hotels with high stars, > 4"@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel> <http://www.w3.org/2000/01/rdf-schema#label> "High Star Hotel"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant that primarily serves dishes of Italian cuisine."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Italian Restaurant"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant that primarily serves dishes of Japanese cuisine."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Japanese Restaurant"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel of great comfort or elegance, especially when involving great expense."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Luxury Hotel"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant that primarily serves dishes of Mediterranean cuisine."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Mediterranean Restaurant"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant that primarily serves dishes of Mexican cuisine."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Mexican Restaurant"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A statue, building, or other structure erected to commemorate a notable person or event."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Monument Attraction"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A building in which objects of historical, scientific, artistic, or cultural interest are stored and exhibited."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Museum Attraction"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event related to or using music."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Music Event"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A large public garden or area of land used for recreation."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Park Attraction"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://dbpedia.org/page/City> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid7 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "A place where people pay to sit and eat meals that are cooked and served on the premises."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event related to or using sports."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Sports Event"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Transport service based on a railway system in which electric trains travel through tunnels below ground."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport> <http://www.w3.org/2000/01/rdf-schema#label> "Subway Transport"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Transport service based on a motor vehicle licensed to transport passengers in return for payment of a fare and typically fitted with a taximeter."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport> <http://www.w3.org/2000/01/rdf-schema#label> "Taxi Transport"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event related to or using technology."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Technology Event"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Hotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel specialized in providing services to tourists."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Touristic Hotel"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Transport service based on a passenger vehicle powered by electricity conveyed by overhead cables, and running on rails laid in a public road."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport> <http://www.w3.org/2000/01/rdf-schema#label> "Tram Transport"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <https://dbpedia.org/page/City> .
+_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> <http://www.w3.org/2000/01/rdf-schema#comment> "A system or means of conveying people or goods from place to place."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc."@en .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# https://dbpedia.org/page/City
+<https://dbpedia.org/page/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dbpedia.org/page/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://dbpedia.org/page/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://dbpedia.org/page/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <https://schema.org/Hotel> .
+_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://dbpedia.org/page/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://dbpedia.org/page/City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://dbpedia.org/page/City> <http://www.w3.org/2000/01/rdf-schema#comment> "A city is a large human settlement. It can be defined as a permanent and densely settled place with administratively defined boundaries whose members work primarily on non-agricultural tasks. Cities generally have extensive systems for housing, transportation, sanitation, utilities, land use, production of goods, and communication. Their density facilitates interaction between people, government organisations and businesses, sometimes benefiting different parties in the process, such as improving efficiency of goods and service distribution. Historically, city-dwellers have been a small proportion of humanity overall, but following two centuries of unprecedented and rapid urbanization, more than half of the world population now lives in cities, which has had profound consequences for global sustainability. Present-day cities usually form the core of larger metropolitan areas and urban areas—creating numerous commuters traveling towards city centres for employment, entertainment, and education. However, in a world of intensifying globalization, all cities are to varying degrees also connected globally beyond these regions. This increased influence means that cities also have significant influences on global issues, such as sustainable development, global warming, and global health. Because of these major influences on global issues, the international community has prioritized investment in sustainable cities through Sustainable Development Goal 11. Due to the efficiency of transportation and the smaller land consumption, dense cities hold the potential to have a smaller ecological footprint per inhabitant than more sparsely populated areas. Therefore, compact cities are often referred to as a crucial element of fighting climate change. However, this concentration can also have significant negative consequences, such as forming urban heat islands, concentrating pollution, and stressing water supplies and other resources. Other important traits of cities besides population include the capital status and relative continued occupation of the city. For example, country capitals such as Beijing, London, Mexico City, Moscow, Nairobi, New Delhi, Paris, Rome, Athens, Seoul, Singapore, Tokyo, Manila, and Washington, D.C. reflect the identity and apex of their respective nations. Some historic capitals, such as Kyoto and Xi'an, maintain their reflection of cultural identity even without modern capital status. Religious holy sites offer another example of capital status within a religion, Jerusalem, Mecca, Varanasi, Ayodhya, Haridwar and Prayagraj each hold significance."@en .
+<https://dbpedia.org/page/City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+# 
+# https://schema.org/Hotel
+<https://schema.org/Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> .
+<https://schema.org/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <https://dbpedia.org/page/City> .
+_:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid17 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid18 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://schema.org/Hotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel is an establishment that provides lodging paid on a short-term basis."@en .
+<https://schema.org/Hotel> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName> "Castell Toledo" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> "3.7"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo> <http://www.w3.org/2000/01/rdf-schema#comment> "A castle in Toledo."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo> <http://www.w3.org/2000/01/rdf-schema#label> "Castell Toledo"@ca .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date> "2024-01-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName> "Festival Madrid" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "A Madrid festival."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Festival Madrid"@ca .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date> "2024-08-26"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName> "Fira Toledo" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo> <http://www.w3.org/2000/01/rdf-schema#comment> "A fair in Toledo."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo> <http://www.w3.org/2000/01/rdf-schema#label> "Fira Toledo"@ca .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> "4.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> "Hotel Del Mar Toledo" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight> "145"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel in Toledo."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel Del Mar Toledo"@ca .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> "4.4"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> "Hotel Royal Madrid" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight> "146"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel in Madrid."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel Royal Madrid"@es .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName> "Madrid" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location> "39.4699,-0.3763" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "City of Madrid."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Madrid"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName> "Museu Madrid" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating> "3.7"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "A museum in Madrid."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Museu Madrid"@ca .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> "Restaurant Gourmet Madrid" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice> "30"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> "4.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant in Madrid."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant Gourmet Madrid"@ca .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> "Restaurant Tradicio Toledo" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice> "46"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating> "3.7"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant in Toledo."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant Tradicio Toledo"@ca .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice> "8.85"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Subway system in Madrid."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Subway Madrid"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://dbpedia.org/page/City> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName> "Toledo" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location> "39.8628,-4.0273" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.w3.org/2000/01/rdf-schema#comment> "City of Toledo."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> <http://www.w3.org/2000/01/rdf-schema#label> "Toledo"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice> "3.61"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo> <http://www.w3.org/2000/01/rdf-schema#comment> "Tram system in Toledo."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo> <http://www.w3.org/2000/01/rdf-schema#label> "Tram Toledo"@en .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> "Trans Toledo" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo> <http://www.w3.org/2000/01/rdf-schema#comment> "Tram transport company in Toledo"@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo> <http://www.w3.org/2000/01/rdf-schema#label> "Trans Toledo"@ca .
+# 
+# http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName> "Urban Madrid" .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Subway transport company in Madrid."@en .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Urban Madrid"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid20 <http://www.w3.org/2002/07/owl#members> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://dbpedia.org/page/City> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://xmlns.com/foaf/0.1/Organization> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid26 <http://www.w3.org/2002/07/owl#members> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Hotel> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/p> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/s> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid30 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid30 <http://www.w3.org/2000/01/rdf-schema#comment> "Checks for high rated hotels." .
+_:genid30 <http://www.w3.org/2000/01/rdf-schema#label> "S2" .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid30 <http://www.w3.org/2003/11/swrl#body> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid32 <http://www.w3.org/2003/11/swrl#classPredicate> <https://schema.org/Hotel> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/2003/11/swrl#arguments> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/r> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .
+_:genid38 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/r> .
+_:genid38 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid38 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid30 <http://www.w3.org/2003/11/swrl#head> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
+_:genid40 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid40 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid41 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid41 <http://www.w3.org/2000/01/rdf-schema#comment> "Checks for cheap hotels." .
+_:genid41 <http://www.w3.org/2000/01/rdf-schema#label> "S1" .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid41 <http://www.w3.org/2003/11/swrl#body> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
+_:genid43 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/p> .
+_:genid43 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid43 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid45 .
+_:genid45 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid45 <http://www.w3.org/2003/11/swrl#classPredicate> <https://schema.org/Hotel> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid47 .
+_:genid47 <http://www.w3.org/2003/11/swrl#arguments> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "146"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/p> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid47 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+<http://www.w3.org/2003/11/swrlb#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid41 <http://www.w3.org/2003/11/swrl#head> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid51 .
+_:genid51 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid51 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid52 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid52 <http://www.w3.org/2000/01/rdf-schema#comment> "Checks for hotels with high stars." .
+_:genid52 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid52 <http://www.w3.org/2003/11/swrl#body> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid54 .
+_:genid54 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid54 <http://www.w3.org/2003/11/swrl#classPredicate> <https://schema.org/Hotel> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid56 .
+_:genid56 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/s> .
+_:genid56 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid56 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid58 .
+_:genid58 <http://www.w3.org/2003/11/swrl#arguments> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/s> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid52 <http://www.w3.org/2003/11/swrl#head> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid62 .
+_:genid62 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> .
+_:genid62 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

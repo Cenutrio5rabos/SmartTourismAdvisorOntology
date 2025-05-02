@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Smart Tourism Advisor Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#","name":"Smart Tourism Advisor Ontology", "headline":"Document describing the ontology http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#", "dateReleased":"2025-05-02", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Eric Catalan Benavent"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Smart Tourism Advisor Ontology</h1>
+<h2>Release: 2025-05-02</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0">http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#">http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0">http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Issued on:</dt>
+<dd>2025-05-02</dd>
+<dt>Authors:</dt>
+<dd>Eric Catalan Benavent</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Eric Catalan Benavent. Smart Tourism Advisor Ontology. Revision: 1.0.0. Retrieved from: http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>page</b></td><td>&lt;https://dbpedia.org/page/&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;https://schema.org/&gt;</td></tr>
+<tr><td><b>stao</b></td><td>&lt;http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#&gt;</td></tr>
+<tr><td><b>swrl</b></td><td>&lt;http://www.w3.org/2003/11/swrl#&gt;</td></tr>
+<tr><td><b>swrla</b></td><td>&lt;http://swrl.stanford.edu/ontologies/3.3/swrla.owl#&gt;</td></tr>
+<tr><td><b>swrlb</b></td><td>&lt;http://www.w3.org/2003/11/swrlb#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">STAO: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AndalusianRestaurant"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant">Andalusian Restaurant</a>
+   </li>
+   <li>
+      <a href="#Attraction"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a>
+   </li>
+   <li>
+      <a href="#BeachAttraction"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction">Beach Attraction</a>
+   </li>
+   <li>
+      <a href="#BeachHotel"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel">Beach Hotel</a>
+   </li>
+   <li>
+      <a href="#BicycleTransport"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport">Bicycle Transport</a>
+   </li>
+   <li>
+      <a href="#BusTransport"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport">Bus Transport</a>
+   </li>
+   <li>
+      <a href="#BusinessHotel"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel">Business Hotel</a>
+   </li>
+   <li>
+      <a href="#CheapHotel"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel">Cheap Hotel</a>
+   </li>
+   <li>
+      <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a>
+   </li>
+   <li>
+      <a href="#Company"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company">Company</a>
+   </li>
+   <li>
+      <a href="#CulturalAttraction"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction">Cultural Attraction</a>
+   </li>
+   <li>
+      <a href="#CulturalEvent"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent">Cultural Event</a>
+   </li>
+   <li>
+      <a href="#Event"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a>
+   </li>
+   <li>
+      <a href="#GastronomyEvent"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent">Gastronomy Event</a>
+   </li>
+   <li>
+      <a href="#HighRatedHotel"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel">High Rated Hotel</a>
+   </li>
+   <li>
+      <a href="#HighStarHotel"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel">High Star Hotel</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a>
+   </li>
+   <li>
+      <a href="#ItalianRestaurant"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant">Italian Restaurant</a>
+   </li>
+   <li>
+      <a href="#JapaneseRestaurant"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant">Japanese Restaurant</a>
+   </li>
+   <li>
+      <a href="#LuxuryHotel"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel">Luxury Hotel</a>
+   </li>
+   <li>
+      <a href="#MediterraneanRestaurant"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant">Mediterranean Restaurant</a>
+   </li>
+   <li>
+      <a href="#MexicanRestaurant"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant">Mexican Restaurant</a>
+   </li>
+   <li>
+      <a href="#MonumentAttraction"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction">Monument Attraction</a>
+   </li>
+   <li>
+      <a href="#MuseumAttraction"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction">Museum Attraction</a>
+   </li>
+   <li>
+      <a href="#MusicEvent"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent">Music Event</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a>
+   </li>
+   <li>
+      <a href="#ParkAttraction"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction">Park Attraction</a>
+   </li>
+   <li>
+      <a href="#Restaurant"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a>
+   </li>
+   <li>
+      <a href="#SportsEvent"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent">Sports Event</a>
+   </li>
+   <li>
+      <a href="#SubwayTransport"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport">Subway Transport</a>
+   </li>
+   <li>
+      <a href="#TaxiTransport"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport">Taxi Transport</a>
+   </li>
+   <li>
+      <a href="#TechnologyEvent"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent">Technology Event</a>
+   </li>
+   <li>
+      <a href="#TouristicHotel"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel">Touristic Hotel</a>
+   </li>
+   <li>
+      <a href="#TramTransport"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport">Tram Transport</a>
+   </li>
+   <li>
+      <a href="#Transport"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#attractionIsIn"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn">attractionIsIn</a>
+   </li>
+   <li>
+      <a href="#company"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company">company</a>
+   </li>
+   <li>
+      <a href="#eventIsIn"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn">eventIsIn</a>
+   </li>
+   <li>
+      <a href="#hasAttraction"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction">hasAttraction</a>
+   </li>
+   <li>
+      <a href="#hasEvent"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent">hasEvent</a>
+   </li>
+   <li>
+      <a href="#hasHotel"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel">hasHotel</a>
+   </li>
+   <li>
+      <a href="#hasRestaurant"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant">hasRestaurant</a>
+   </li>
+   <li>
+      <a href="#hasTransport"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport">hasTransport</a>
+   </li>
+   <li>
+      <a href="#hotelIsIn"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn">hotelIsIn</a>
+   </li>
+   <li>
+      <a href="#restaurantIsIn"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn">restaurantIsIn</a>
+   </li>
+   <li>
+      <a href="#transportIsIn"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn">transportIsIn</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#attractionName"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName">attractionName</a>
+   </li>
+   <li>
+      <a href="#attractionRating"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating">attractionRating</a>
+   </li>
+   <li>
+      <a href="#cityName"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName">cityName</a>
+   </li>
+   <li>
+      <a href="#date"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date">date</a>
+   </li>
+   <li>
+      <a href="#eventName"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName">eventName</a>
+   </li>
+   <li>
+      <a href="#hotelRating"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating">hotelRating</a>
+   </li>
+   <li>
+      <a href="#location"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location">location</a>
+   </li>
+   <li>
+      <a href="#orgName"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a>
+   </li>
+   <li>
+      <a href="#pricePerNight"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight">pricePerNight</a>
+   </li>
+   <li>
+      <a href="#restaurantAvgPrice"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice">restaurantAvgPrice</a>
+   </li>
+   <li>
+      <a href="#restaurantRating"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating">restaurantRating</a>
+   </li>
+   <li>
+      <a href="#stars"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars">stars</a>
+   </li>
+   <li>
+      <a href="#transportAvgPrice"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice">transportAvgPrice</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is Rule Enabled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Castell_Toledo"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo">Castell Toledo</a>
+   </li>
+   <li>
+      <a href="#Festival_Madrid"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid">Festival Madrid</a>
+   </li>
+   <li>
+      <a href="#Fira_Toledo"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo">Fira Toledo</a>
+   </li>
+   <li>
+      <a href="#Hotel_Del_Mar_Toledo"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo">Hotel Del Mar Toledo</a>
+   </li>
+   <li>
+      <a href="#Hotel_Royal_Madrid"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid">Hotel Royal Madrid</a>
+   </li>
+   <li>
+      <a href="#Madrid"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid">Madrid</a>
+   </li>
+   <li>
+      <a href="#Museu_Madrid"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid">Museu Madrid</a>
+   </li>
+   <li>
+      <a href="#Restaurant_Gourmet_Madrid"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid">Restaurant Gourmet Madrid</a>
+   </li>
+   <li>
+      <a href="#Restaurant_Tradicio_Toledo"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo">Restaurant Tradicio Toledo</a>
+   </li>
+   <li>
+      <a href="#Subway_Madrid"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid">Subway Madrid</a>
+   </li>
+   <li>
+      <a href="#Toledo"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo">Toledo</a>
+   </li>
+   <li>
+      <a href="#Tram_Toledo"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo">Tram Toledo</a>
+   </li>
+   <li>
+      <a href="#Trans_Toledo"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo">Trans Toledo</a>
+   </li>
+   <li>
+      <a href="#Urban_Madrid"
+         title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid">Urban Madrid</a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e1695">S1</a>
+   </li>
+   <li>
+      <a href="#d4e1573">S2</a>
+   </li>
+   <li>
+      <a href="#d4e1817">S3</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">STAO: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This is an ontology that describes important factors in the tourism industry in different cities, such as accommodations, prices, important attractions, transportation...
+
+The purpose of the ontology is to model a large part of the relevant knowledge about tourism. It is expected that the knowledge modeled by this ontology will allow its users to make intelligent recommendations regarding possible tourist adventures. It also aims to provide valuable data that can be processed by companies in the sector and that will allow them to improve their services.
+
+Therefore, the ontology can be used to answer questions such as:
+• What hotels are there in Madrid
+• What attractions are there in Barcelona
+• What day is the Bilbao Carnival
+• What is the price per night of the Hotel Sol</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for STAO classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by STAO.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AndalusianRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant">Andalusian Restaurant</a></li>
+  <li><a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a></li>
+  <li><a href="#BeachAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction">Beach Attraction</a></li>
+  <li><a href="#BeachHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel">Beach Hotel</a></li>
+  <li><a href="#BicycleTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport">Bicycle Transport</a></li>
+  <li><a href="#BusTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport">Bus Transport</a></li>
+  <li><a href="#BusinessHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel">Business Hotel</a></li>
+  <li><a href="#CheapHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel">Cheap Hotel</a></li>
+  <li><a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a></li>
+  <li><a href="#Company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company">Company</a></li>
+  <li><a href="#CulturalAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction">Cultural Attraction</a></li>
+  <li><a href="#CulturalEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent">Cultural Event</a></li>
+  <li><a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a></li>
+  <li><a href="#GastronomyEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent">Gastronomy Event</a></li>
+  <li><a href="#HighRatedHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel">High Rated Hotel</a></li>
+  <li><a href="#HighStarHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel">High Star Hotel</a></li>
+  <li><a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a></li>
+  <li><a href="#ItalianRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant">Italian Restaurant</a></li>
+  <li><a href="#JapaneseRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant">Japanese Restaurant</a></li>
+  <li><a href="#LuxuryHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel">Luxury Hotel</a></li>
+  <li><a href="#MediterraneanRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant">Mediterranean Restaurant</a></li>
+  <li><a href="#MexicanRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant">Mexican Restaurant</a></li>
+  <li><a href="#MonumentAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction">Monument Attraction</a></li>
+  <li><a href="#MuseumAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction">Museum Attraction</a></li>
+  <li><a href="#MusicEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent">Music Event</a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a></li>
+  <li><a href="#ParkAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction">Park Attraction</a></li>
+  <li><a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a></li>
+  <li><a href="#SportsEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent">Sports Event</a></li>
+  <li><a href="#SubwayTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport">Subway Transport</a></li>
+  <li><a href="#TaxiTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport">Taxi Transport</a></li>
+  <li><a href="#TechnologyEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent">Technology Event</a></li>
+  <li><a href="#TouristicHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel">Touristic Hotel</a></li>
+  <li><a href="#TramTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport">Tram Transport</a></li>
+  <li><a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a></li>
+ </ul>
+ <div class="entity" id="AndalusianRestaurant">
+  <h3>Andalusian Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant that primarily serves dishes of Andalusian cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Attraction">
+  <h3>Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction</p>
+  <div class="comment">
+   <span class="markdown">A place which draws visitors by providing something of interest or pleasure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BeachAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction">Beach Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#CulturalAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction">Cultural Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MonumentAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction">Monument Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#MuseumAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction">Museum Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#ParkAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction">Park Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#attractionIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn">attractionIsIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#attractionName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#attractionRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating">attractionRating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction">hasAttraction</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BeachAttraction">
+  <h3>Beach Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction</p>
+  <div class="comment">
+   <span class="markdown">A strip of land covered with sand, shingle, or small stones at the edge of a body of water, especially by the sea between high- and low-water marks.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BeachHotel">
+  <h3>Beach Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel</p>
+  <div class="comment">
+   <span class="markdown">A hotel located near a beach.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Hotel_Del_Mar_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo">Hotel Del Mar Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BicycleTransport">
+  <h3>Bicycle Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport</p>
+  <div class="comment">
+   <span class="markdown">Transport service based on a vehicle consisting of two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front wheel.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BusTransport">
+  <h3>Bus Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport</p>
+  <div class="comment">
+   <span class="markdown">Transport service based on a large motor vehicle carrying passengers by road, typically one serving the public on a fixed route and for a fare.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BusinessHotel">
+  <h3>Business Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel</p>
+  <div class="comment">
+   <span class="markdown">A hotel specialized in providing services to travelers on business trips.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Hotel_Royal_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid">Hotel Royal Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CheapHotel">
+  <h3>Cheap Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel</p>
+  <div class="comment">
+   <span class="markdown">Cheap hotels, &lt;146 cost of price per night.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dbpedia.org/page/City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dbpedia.org/page/City</p>
+  <div class="comment">
+   <span class="markdown">A city is a large human settlement. It can be defined as a permanent and densely settled place with administratively defined boundaries whose members work primarily on non-agricultural tasks. Cities generally have extensive systems for housing, transportation, sanitation, utilities, land use, production of goods, and communication. Their density facilitates interaction between people, government organisations and businesses, sometimes benefiting different parties in the process, such as improving efficiency of goods and service distribution. Historically, city-dwellers have been a small proportion of humanity overall, but following two centuries of unprecedented and rapid urbanization, more than half of the world population now lives in cities, which has had profound consequences for global sustainability. Present-day cities usually form the core of larger metropolitan areas and urban areas—creating numerous commuters traveling towards city centres for employment, entertainment, and education. However, in a world of intensifying globalization, all cities are to varying degrees also connected globally beyond these regions. This increased influence means that cities also have significant influences on global issues, such as sustainable development, global warming, and global health. Because of these major influences on global issues, the international community has prioritized investment in sustainable cities through Sustainable Development Goal 11. Due to the efficiency of transportation and the smaller land consumption, dense cities hold the potential to have a smaller ecological footprint per inhabitant than more sparsely populated areas. Therefore, compact cities are often referred to as a crucial element of fighting climate change. However, this concentration can also have significant negative consequences, such as forming urban heat islands, concentrating pollution, and stressing water supplies and other resources. Other important traits of cities besides population include the capital status and relative continued occupation of the city. For example, country capitals such as Beijing, London, Mexico City, Moscow, Nairobi, New Delhi, Paris, Rome, Athens, Seoul, Singapore, Tokyo, Manila, and Washington, D.C. reflect the identity and apex of their respective nations. Some historic capitals, such as Kyoto and Xi'an, maintain their reflection of cultural identity even without modern capital status. Religious holy sites offer another example of capital status within a religion, Jerusalem, Mecca, Varanasi, Ayodhya, Haridwar and Prayagraj each hold significance.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#cityName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction">hasAttraction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant">hasRestaurant</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport">hasTransport</a> <sup class="type-op" title="object property">op</sup>, <a href="#location" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location">location</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#attractionIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn">attractionIsIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#eventIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn">eventIsIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#hotelIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn">hotelIsIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#restaurantIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn">restaurantIsIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#transportIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn">transportIsIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Company">
+  <h3>Company<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company</p>
+  <div class="comment">
+   <span class="markdown">A commercial business.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company">company</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Trans_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo">Trans Toledo</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Urban_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid">Urban Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalAttraction">
+  <h3>Cultural Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction</p>
+  <div class="comment">
+   <span class="markdown">An attraction related to the ideas, customs, and social behaviour of a society.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CulturalEvent">
+  <h3>Cultural Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent</p>
+  <div class="comment">
+   <span class="markdown">An event related to the ideas, customs, and social behaviour of a society.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event</p>
+  <div class="comment">
+   <span class="markdown">A planned public or social occasion.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CulturalEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent">Cultural Event</a> <sup class="type-c" title="class">c</sup>, <a href="#GastronomyEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent">Gastronomy Event</a> <sup class="type-c" title="class">c</sup>, <a href="#MusicEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent">Music Event</a> <sup class="type-c" title="class">c</sup>, <a href="#SportsEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent">Sports Event</a> <sup class="type-c" title="class">c</sup>, <a href="#TechnologyEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent">Technology Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#date" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date">date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#eventIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn">eventIsIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#eventName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GastronomyEvent">
+  <h3>Gastronomy Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent</p>
+  <div class="comment">
+   <span class="markdown">An event related to or using gastronomy.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Festival_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid">Festival Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HighRatedHotel">
+  <h3>High Rated Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel</p>
+  <div class="comment">
+   <span class="markdown">Highly rated hotels, rating &gt;4.3.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HighStarHotel">
+  <h3>High Star Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel</p>
+  <div class="comment">
+   <span class="markdown">Hotels with high stars, &gt; 4</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Hotel</p>
+  <div class="comment">
+   <span class="markdown">A hotel is an establishment that provides lodging paid on a short-term basis.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel">Beach Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#BusinessHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel">Business Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#CheapHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel">Cheap Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#HighRatedHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel">High Rated Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#HighStarHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel">High Star Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#LuxuryHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel">Luxury Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#TouristicHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel">Touristic Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hotelIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn">hotelIsIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#hotelRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating">hotelRating</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#pricePerNight" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight">pricePerNight</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#stars" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars">stars</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ItalianRestaurant">
+  <h3>Italian Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant that primarily serves dishes of Italian cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="JapaneseRestaurant">
+  <h3>Japanese Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant that primarily serves dishes of Japanese cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Restaurant_Gourmet_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid">Restaurant Gourmet Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LuxuryHotel">
+  <h3>Luxury Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel</p>
+  <div class="comment">
+   <span class="markdown">A hotel of great comfort or elegance, especially when involving great expense.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MediterraneanRestaurant">
+  <h3>Mediterranean Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant that primarily serves dishes of Mediterranean cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MexicanRestaurant">
+  <h3>Mexican Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant that primarily serves dishes of Mexican cuisine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Restaurant_Tradicio_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo">Restaurant Tradicio Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MonumentAttraction">
+  <h3>Monument Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction</p>
+  <div class="comment">
+   <span class="markdown">A statue, building, or other structure erected to commemorate a notable person or event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Castell_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo">Castell Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MuseumAttraction">
+  <h3>Museum Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction</p>
+  <div class="comment">
+   <span class="markdown">A building in which objects of historical, scientific, artistic, or cultural interest are stored and exhibited.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Museu_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid">Museu Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MusicEvent">
+  <h3>Music Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent</p>
+  <div class="comment">
+   <span class="markdown">An event related to or using music.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/Organization">
+  <h3>Organization<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/Organization</p>
+  <div class="comment">
+   <span class="markdown">The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#orgName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ParkAttraction">
+  <h3>Park Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction</p>
+  <div class="comment">
+   <span class="markdown">A large public garden or area of land used for recreation.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Restaurant">
+  <h3>Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant</p>
+  <div class="comment">
+   <span class="markdown">A place where people pay to sit and eat meals that are cooked and served on the premises.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AndalusianRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant">Andalusian Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#ItalianRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant">Italian Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#JapaneseRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant">Japanese Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MediterraneanRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant">Mediterranean Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#MexicanRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant">Mexican Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#restaurantAvgPrice" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#restaurantIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn">restaurantIsIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#restaurantRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating">restaurantRating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant">hasRestaurant</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company">Company</a> <sup class="type-c" title="class">c</sup>, <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SportsEvent">
+  <h3>Sports Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent</p>
+  <div class="comment">
+   <span class="markdown">An event related to or using sports.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Fira_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo">Fira Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SubwayTransport">
+  <h3>Subway Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport</p>
+  <div class="comment">
+   <span class="markdown">Transport service based on a railway system in which electric trains travel through tunnels below ground.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Subway_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid">Subway Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TaxiTransport">
+  <h3>Taxi Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport</p>
+  <div class="comment">
+   <span class="markdown">Transport service based on a motor vehicle licensed to transport passengers in return for payment of a fare and typically fitted with a taximeter.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TechnologyEvent">
+  <h3>Technology Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent</p>
+  <div class="comment">
+   <span class="markdown">An event related to or using technology.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TouristicHotel">
+  <h3>Touristic Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel</p>
+  <div class="comment">
+   <span class="markdown">A hotel specialized in providing services to tourists.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TramTransport">
+  <h3>Tram Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport</p>
+  <div class="comment">
+   <span class="markdown">Transport service based on a passenger vehicle powered by electricity conveyed by overhead cables, and running on rails laid in a public road.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#Tram_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo">Tram Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Transport">
+  <h3>Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport</p>
+  <div class="comment">
+   <span class="markdown">A system or means of conveying people or goods from place to place.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#BicycleTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport">Bicycle Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#BusTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport">Bus Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#SubwayTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport">Subway Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#TaxiTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport">Taxi Transport</a> <sup class="type-c" title="class">c</sup>, <a href="#TramTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport">Tram Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company">company</a> <sup class="type-op" title="object property">op</sup>, <a href="#transportAvgPrice" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#transportIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn">transportIsIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport">hasTransport</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>, <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#attractionIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn">attractionIsIn</a></li>
+  <li><a href="#company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company">company</a></li>
+  <li><a href="#eventIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn">eventIsIn</a></li>
+  <li><a href="#hasAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction">hasAttraction</a></li>
+  <li><a href="#hasEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent">hasEvent</a></li>
+  <li><a href="#hasHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel">hasHotel</a></li>
+  <li><a href="#hasRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant">hasRestaurant</a></li>
+  <li><a href="#hasTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport">hasTransport</a></li>
+  <li><a href="#hotelIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn">hotelIsIn</a></li>
+  <li><a href="#restaurantIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn">restaurantIsIn</a></li>
+  <li><a href="#transportIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn">transportIsIn</a></li>
+ </ul>
+ <div class="entity" id="attractionIsIn">
+  <h3>attractionIsIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn</p>
+  <div class="comment">
+   <span class="markdown">Indicates in which city the attraction is located.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction">hasAttraction</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="company">
+  <h3>company<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company</p>
+  <div class="comment">
+   <span class="markdown">Indicates the company that handles the service.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company">Company</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eventIsIn">
+  <h3>eventIsIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn</p>
+  <div class="comment">
+   <span class="markdown">Indicates in which city the event is held.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAttraction">
+  <h3>hasAttraction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction</p>
+  <div class="comment">
+   <span class="markdown">Relates a city to an attraction located within it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#attractionIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn">attractionIsIn</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEvent">
+  <h3>hasEvent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent</p>
+  <div class="comment">
+   <span class="markdown">Relates a city to an event held within it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#eventIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn">eventIsIn</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasHotel">
+  <h3>hasHotel<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel</p>
+  <div class="comment">
+   <span class="markdown">Relates a city to a hotel located within it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hotelIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn">hotelIsIn</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRestaurant">
+  <h3>hasRestaurant<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant</p>
+  <div class="comment">
+   <span class="markdown">Relates a city to a restaurant located within it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#restaurantIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn">restaurantIsIn</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTransport">
+  <h3>hasTransport<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport</p>
+  <div class="comment">
+   <span class="markdown">Relates a city to a transport located within it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#transportIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn">transportIsIn</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hotelIsIn">
+  <h3>hotelIsIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn</p>
+  <div class="comment">
+   <span class="markdown">Indicates in which city the hotel is located.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="restaurantIsIn">
+  <h3>restaurantIsIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn</p>
+  <div class="comment">
+   <span class="markdown">Indicates in which city the restaurant is located.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant">hasRestaurant</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="transportIsIn">
+  <h3>transportIsIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn</p>
+  <div class="comment">
+   <span class="markdown">Indicates the city in which the transport is located.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport">hasTransport</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#attractionName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName">attractionName</a></li>
+  <li><a href="#attractionRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating">attractionRating</a></li>
+  <li><a href="#cityName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName">cityName</a></li>
+  <li><a href="#date" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date">date</a></li>
+  <li><a href="#eventName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName">eventName</a></li>
+  <li><a href="#hotelRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating">hotelRating</a></li>
+  <li><a href="#location" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location">location</a></li>
+  <li><a href="#orgName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a></li>
+  <li><a href="#pricePerNight" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight">pricePerNight</a></li>
+  <li><a href="#restaurantAvgPrice" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice">restaurantAvgPrice</a></li>
+  <li><a href="#restaurantRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating">restaurantRating</a></li>
+  <li><a href="#stars" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars">stars</a></li>
+  <li><a href="#transportAvgPrice" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice">transportAvgPrice</a></li>
+ </ul>
+ <div class="entity" id="attractionName">
+  <h3>attractionName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName</p>
+  <div class="comment">
+   <span class="markdown">The official name or title of an attraction.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="attractionRating">
+  <h3>attractionRating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating</p>
+  <div class="comment">
+   <span class="markdown">A numeric score for attractions, from 0 to 5.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Attraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction">Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="cityName">
+  <h3>cityName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName</p>
+  <div class="comment">
+   <span class="markdown">The official name or title of a city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="date">
+  <h3>date<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date</p>
+  <div class="comment">
+   <span class="markdown">A calendar date related to the entity, formated as YYYY-MM-DD</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="eventName">
+  <h3>eventName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName</p>
+  <div class="comment">
+   <span class="markdown">The official name or title of an event.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hotelRating">
+  <h3>hotelRating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating</p>
+  <div class="comment">
+   <span class="markdown">A numeric score for hotels, from 0 to 5.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="location">
+  <h3>location<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location</p>
+  <div class="comment">
+   <span class="markdown">The latitude and longitude coordinates of a location.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="orgName">
+  <h3>orgName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName</p>
+  <div class="comment">
+   <span class="markdown">The official name or title of an organization.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="pricePerNight">
+  <h3>pricePerNight<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight</p>
+  <div class="comment">
+   <span class="markdown">The cost for each night spent.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="restaurantAvgPrice">
+  <h3>restaurantAvgPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice</p>
+  <div class="comment">
+   <span class="markdown">Average cost of the restaurant.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="restaurantRating">
+  <h3>restaurantRating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating</p>
+  <div class="comment">
+   <span class="markdown">A numeric score for restaurants, from 0 to 5.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Restaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="stars">
+  <h3>stars<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars</p>
+  <div class="comment">
+   <span class="markdown">A star-based rating.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="transportAvgPrice">
+  <h3>transportAvgPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice</p>
+  <div class="comment">
+   <span class="markdown">Average cost of the transport.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Transport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"> <span>is Rule Enabled</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+  <h3>is Rule Enabled<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#Castell_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo">Castell Toledo</a></li>
+  <li><a href="#Festival_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid">Festival Madrid</a></li>
+  <li><a href="#Fira_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo">Fira Toledo</a></li>
+  <li><a href="#Hotel_Del_Mar_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo">Hotel Del Mar Toledo</a></li>
+  <li><a href="#Hotel_Royal_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid">Hotel Royal Madrid</a></li>
+  <li><a href="#Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid">Madrid</a></li>
+  <li><a href="#Museu_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid">Museu Madrid</a></li>
+  <li><a href="#Restaurant_Gourmet_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid">Restaurant Gourmet Madrid</a></li>
+  <li><a href="#Restaurant_Tradicio_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo">Restaurant Tradicio Toledo</a></li>
+  <li><a href="#Subway_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid">Subway Madrid</a></li>
+  <li><a href="#Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo">Toledo</a></li>
+  <li><a href="#Tram_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo">Tram Toledo</a></li>
+  <li><a href="#Trans_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo">Trans Toledo</a></li>
+  <li><a href="#Urban_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid">Urban Madrid</a></li>
+ </ul>
+ <div class="entity" id="Castell_Toledo">
+  <h3>Castell Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo</p>
+  <div class="comment">
+   <span class="markdown">A castle in Toledo.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MonumentAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction">Monument Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#attractionIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn">attractionIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#attractionName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Castell Toledo"</span>
+   </dd>
+   <dd>
+    <a href="#attractionRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating">attractionRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.7"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Festival_Madrid">
+  <h3>Festival Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid</p>
+  <div class="comment">
+   <span class="markdown">A Madrid festival.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#GastronomyEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent">Gastronomy Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#eventIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn">eventIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#date" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date">date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-01-12"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#eventName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Festival Madrid"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Fira_Toledo">
+  <h3>Fira Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo</p>
+  <div class="comment">
+   <span class="markdown">A fair in Toledo.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#SportsEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent">Sports Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#eventIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn">eventIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#date" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date">date</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2024-08-26"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#eventName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName">eventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Fira Toledo"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Hotel_Del_Mar_Toledo">
+  <h3>Hotel Del Mar Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo</p>
+  <div class="comment">
+   <span class="markdown">A hotel in Toledo.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#BeachHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel">Beach Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hotelIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn">hotelIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hotelRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating">hotelRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.3"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#orgName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Del Mar Toledo"</span>
+   </dd>
+   <dd>
+    <a href="#pricePerNight" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight">pricePerNight</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"145"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#stars" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars">stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Hotel_Royal_Madrid">
+  <h3>Hotel Royal Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid</p>
+  <div class="comment">
+   <span class="markdown">A hotel in Madrid.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#BusinessHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel">Business Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hotelIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn">hotelIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hotelRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating">hotelRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#orgName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Royal Madrid"</span>
+   </dd>
+   <dd>
+    <a href="#pricePerNight" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight">pricePerNight</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"146"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+   <dd>
+    <a href="#stars" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars">stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Madrid">
+  <h3>Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid</p>
+  <div class="comment">
+   <span class="markdown">City of Madrid.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction">hasAttraction</a> <sup class="type-op" title="object property">op</sup> <a href="#Museu_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid">Museu Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup> <a href="#Festival_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid">Festival Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup> <a href="#Hotel_Royal_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid">Hotel Royal Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant">hasRestaurant</a> <sup class="type-op" title="object property">op</sup> <a href="#Restaurant_Gourmet_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid">Restaurant Gourmet Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport">hasTransport</a> <sup class="type-op" title="object property">op</sup> <a href="#Subway_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid">Subway Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#cityName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Madrid"</span>
+   </dd>
+   <dd>
+    <a href="#location" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location">location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"39.4699,-0.3763"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Museu_Madrid">
+  <h3>Museu Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid</p>
+  <div class="comment">
+   <span class="markdown">A museum in Madrid.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MuseumAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction">Museum Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#attractionIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn">attractionIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#attractionName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName">attractionName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Museu Madrid"</span>
+   </dd>
+   <dd>
+    <a href="#attractionRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating">attractionRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.7"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Restaurant_Gourmet_Madrid">
+  <h3>Restaurant Gourmet Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid</p>
+  <div class="comment">
+   <span class="markdown">A restaurant in Madrid.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#JapaneseRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant">Japanese Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#restaurantIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn">restaurantIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#orgName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurant Gourmet Madrid"</span>
+   </dd>
+   <dd>
+    <a href="#restaurantAvgPrice" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"30"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#restaurantRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating">restaurantRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.8"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Restaurant_Tradicio_Toledo">
+  <h3>Restaurant Tradicio Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo</p>
+  <div class="comment">
+   <span class="markdown">A restaurant in Toledo.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#MexicanRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant">Mexican Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#restaurantIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn">restaurantIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#orgName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurant Tradicio Toledo"</span>
+   </dd>
+   <dd>
+    <a href="#restaurantAvgPrice" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice">restaurantAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"46"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#restaurantRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating">restaurantRating</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.7"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Subway_Madrid">
+  <h3>Subway Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid</p>
+  <div class="comment">
+   <span class="markdown">Subway system in Madrid.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#SubwayTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport">Subway Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company">company</a> <sup class="type-op" title="object property">op</sup> <a href="#Urban_Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid">Urban Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#transportIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn">transportIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Madrid" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#transportAvgPrice" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"8.85"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Toledo">
+  <h3>Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo</p>
+  <div class="comment">
+   <span class="markdown">City of Toledo.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://dbpedia.org/page/City" title="https://dbpedia.org/page/City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#hasAttraction" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction">hasAttraction</a> <sup class="type-op" title="object property">op</sup> <a href="#Castell_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo">Castell Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasEvent" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup> <a href="#Fira_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo">Fira Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel">hasHotel</a> <sup class="type-op" title="object property">op</sup> <a href="#Hotel_Del_Mar_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo">Hotel Del Mar Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasRestaurant" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant">hasRestaurant</a> <sup class="type-op" title="object property">op</sup> <a href="#Restaurant_Tradicio_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo">Restaurant Tradicio Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#hasTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport">hasTransport</a> <sup class="type-op" title="object property">op</sup> <a href="#Tram_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo">Tram Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#cityName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName">cityName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Toledo"</span>
+   </dd>
+   <dd>
+    <a href="#location" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location">location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"39.8628,-4.0273"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Tram_Toledo">
+  <h3>Tram Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo</p>
+  <div class="comment">
+   <span class="markdown">Tram system in Toledo.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#TramTransport" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport">Tram Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company">company</a> <sup class="type-op" title="object property">op</sup> <a href="#Trans_Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo">Trans Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#transportIsIn" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn">transportIsIn</a> <sup class="type-op" title="object property">op</sup> <a href="#Toledo" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#transportAvgPrice" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice">transportAvgPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.61"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Trans_Toledo">
+  <h3>Trans Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo</p>
+  <div class="comment">
+   <span class="markdown">Tram transport company in Toledo</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company">Company</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#orgName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Trans Toledo"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Urban_Madrid">
+  <h3>Urban Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid</p>
+  <div class="comment">
+   <span class="markdown">Subway transport company in Madrid.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Company" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company">Company</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#orgName" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName">orgName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Urban Madrid"</span>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e1695">S1</a></li>
+  <li><a href="#d4e1573">S2</a></li>
+  <li><a href="#d4e1817">S3</a></li>
+ </ul>
+ <div class="entity" id="d4e1695">
+  <h3>S1<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>Checks for cheap hotels.<br><br><a href="http://www.w3.org/2003/11/swrlb#lessThan" title="lessThan">lessThan</a>(?) , <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?) , <a href="#pricePerNight" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight">pricePerNight</a> <sup class="type-dp" title="data property">dp</sup>(?,?) -&gt; <a href="#CheapHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel">Cheap Hotel</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+ <div class="entity" id="d4e1573">
+  <h3>S2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>Checks for high rated hotels.<br><br><a href="#hotelRating" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating">hotelRating</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) , <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?) -&gt; <a href="#HighRatedHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel">High Rated Hotel</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+ <div class="entity" id="d4e1817">
+  <h3>S3<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>Checks for hotels with high stars.<br><br><a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) , <a href="#stars" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars">stars</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="#https://schema.org/Hotel" title="https://schema.org/Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?) -&gt; <a href="#HighStarHotel" title="http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel">High Star Hotel</a> <sup class="type-c" title="class">c</sup>(?)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog">null</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

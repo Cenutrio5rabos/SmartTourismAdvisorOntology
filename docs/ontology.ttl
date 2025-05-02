@@ -1,0 +1,928 @@
+@prefix : <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#> .
+
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology> rdf:type owl:Ontology ;
+                                                                                 owl:versionIRI <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0> ;
+                                                                                 <http://purl.org/dc/terms/created> "2025-05-02"^^xsd:date ;
+                                                                                 <http://purl.org/dc/terms/creator> "Eric Catalan Benavent"^^rdfs:Literal ;
+                                                                                 <http://purl.org/dc/terms/description> """This is an ontology that describes important factors in the tourism industry in different cities, such as accommodations, prices, important attractions, transportation...
+
+The purpose of the ontology is to model a large part of the relevant knowledge about tourism. It is expected that the knowledge modeled by this ontology will allow its users to make intelligent recommendations regarding possible tourist adventures. It also aims to provide valuable data that can be processed by companies in the sector and that will allow them to improve their services.
+
+Therefore, the ontology can be used to answer questions such as:
+• What hotels are there in Madrid
+• What attractions are there in Barcelona
+• What day is the Bilbao Carnival
+• What is the price per night of the Hotel Sol"""@en ;
+                                                                                 <http://purl.org/dc/terms/issued> "2025-05-02"^^xsd:date ;
+                                                                                 <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^rdfs:Literal ;
+                                                                                 <http://purl.org/dc/terms/title> "Smart Tourism Advisor Ontology"@en ;
+                                                                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "stao"^^rdfs:Literal ;
+                                                                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#"^^rdfs:Literal ;
+                                                                                 rdfs:label "STAO"@en ;
+                                                                                 owl:priorVersion "http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/1.0.0"^^rdfs:Literal ;
+                                                                                 owl:versionInfo "1.0.0"^^rdfs:Literal .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionIsIn
+:attractionIsIn rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasAttraction ;
+                rdfs:domain :Attraction ;
+                rdfs:range <https://dbpedia.org/page/City> ;
+                rdfs:comment "Indicates in which city the attraction is located."@en ;
+                rdfs:label "attractionIsIn"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#company
+:company rdf:type owl:ObjectProperty ;
+         rdfs:domain :Transport ;
+         rdfs:range :Company ;
+         rdfs:comment "Indicates the company that handles the service."@en ;
+         rdfs:label "company"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventIsIn
+:eventIsIn rdf:type owl:ObjectProperty ;
+           owl:inverseOf :hasEvent ;
+           rdfs:domain :Event ;
+           rdfs:range <https://dbpedia.org/page/City> ;
+           rdfs:comment "Indicates in which city the event is held."@en ;
+           rdfs:label "eventIsIn"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasAttraction
+:hasAttraction rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://dbpedia.org/page/City> ;
+               rdfs:range :Attraction ;
+               rdfs:comment "Relates a city to an attraction located within it."@en ;
+               rdfs:label "hasAttraction"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasEvent
+:hasEvent rdf:type owl:ObjectProperty ;
+          rdfs:domain <https://dbpedia.org/page/City> ;
+          rdfs:range :Event ;
+          rdfs:comment "Relates a city to an event held within it."@en ;
+          rdfs:label "hasEvent"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasHotel
+:hasHotel rdf:type owl:ObjectProperty ;
+          owl:inverseOf :hotelIsIn ;
+          rdfs:domain <https://dbpedia.org/page/City> ;
+          rdfs:range <https://schema.org/Hotel> ;
+          rdfs:comment "Relates a city to a hotel located within it."@en ;
+          rdfs:label "hasHotel"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasRestaurant
+:hasRestaurant rdf:type owl:ObjectProperty ;
+               owl:inverseOf :restaurantIsIn ;
+               rdfs:domain <https://dbpedia.org/page/City> ;
+               rdfs:range :Restaurant ;
+               rdfs:comment "Relates a city to a restaurant located within it."@en ;
+               rdfs:label "hasRestaurant"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hasTransport
+:hasTransport rdf:type owl:ObjectProperty ;
+              owl:inverseOf :transportIsIn ;
+              rdfs:domain <https://dbpedia.org/page/City> ;
+              rdfs:range :Transport ;
+              rdfs:comment "Relates a city to a transport located within it."@en ;
+              rdfs:label "hasTransport"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelIsIn
+:hotelIsIn rdf:type owl:ObjectProperty ;
+           rdfs:domain <https://schema.org/Hotel> ;
+           rdfs:range <https://dbpedia.org/page/City> ;
+           rdfs:comment "Indicates in which city the hotel is located."@en ;
+           rdfs:label "hotelIsIn"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantIsIn
+:restaurantIsIn rdf:type owl:ObjectProperty ;
+                rdfs:domain :Restaurant ;
+                rdfs:range <https://dbpedia.org/page/City> ;
+                rdfs:comment "Indicates in which city the restaurant is located."@en ;
+                rdfs:label "restaurantIsIn"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportIsIn
+:transportIsIn rdf:type owl:ObjectProperty ;
+               rdfs:domain :Transport ;
+               rdfs:range <https://dbpedia.org/page/City> ;
+               rdfs:comment "Indicates the city in which the transport is located."@en ;
+               rdfs:label "transportIsIn"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionName
+:attractionName rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Attraction ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The official name or title of an attraction."@en ;
+                rdfs:label "attractionName"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#attractionRating
+:attractionRating rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Attraction ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:comment "A numeric score for attractions, from 0 to 5."@en ;
+                  rdfs:label "attractionRating"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#cityName
+:cityName rdf:type owl:DatatypeProperty ;
+          rdfs:domain <https://dbpedia.org/page/City> ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The official name or title of a city."@en ;
+          rdfs:label "cityName"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Event ;
+      rdfs:range xsd:date ;
+      rdfs:comment "A calendar date related to the entity, formated as YYYY-MM-DD"@en ;
+      rdfs:label "date"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#eventName
+:eventName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Event ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The official name or title of an event."@en ;
+           rdfs:label "eventName"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#hotelRating
+:hotelRating rdf:type owl:DatatypeProperty ;
+             rdfs:domain <https://schema.org/Hotel> ;
+             rdfs:range xsd:decimal ;
+             rdfs:comment "A numeric score for hotels, from 0 to 5."@en ;
+             rdfs:label "hotelRating"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#location
+:location rdf:type owl:DatatypeProperty ;
+          rdfs:domain <https://dbpedia.org/page/City> ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The latitude and longitude coordinates of a location."@en ;
+          rdfs:label "location"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#orgName
+:orgName rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://xmlns.com/foaf/0.1/Organization> ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The official name or title of an organization."@en ;
+         rdfs:label "orgName"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#pricePerNight
+:pricePerNight rdf:type owl:DatatypeProperty ;
+               rdfs:domain <https://schema.org/Hotel> ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "The cost for each night spent."@en ;
+               rdfs:label "pricePerNight"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantAvgPrice
+:restaurantAvgPrice rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Restaurant ;
+                    rdfs:range xsd:decimal ;
+                    rdfs:comment "Average cost of the restaurant."@en ;
+                    rdfs:label "restaurantAvgPrice"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#restaurantRating
+:restaurantRating rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Restaurant ;
+                  rdfs:range xsd:decimal ;
+                  rdfs:comment "A numeric score for restaurants, from 0 to 5."@en ;
+                  rdfs:label "restaurantRating"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#stars
+:stars rdf:type owl:DatatypeProperty ;
+       rdfs:domain <https://schema.org/Hotel> ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "A star-based rating."@en ;
+       rdfs:label "stars"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#transportAvgPrice
+:transportAvgPrice rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Transport ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "Average cost of the transport."@en ;
+                   rdfs:label "transportAvgPrice"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#AndalusianRestaurant
+:AndalusianRestaurant rdf:type owl:Class ;
+                      rdfs:subClassOf :Restaurant ;
+                      rdfs:comment "A restaurant that primarily serves dishes of Andalusian cuisine."@en ;
+                      rdfs:label "Andalusian Restaurant"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Attraction
+:Attraction rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :attractionIsIn ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass <https://dbpedia.org/page/City>
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :attractionRating ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:decimal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :attractionRating ;
+                              owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:decimal
+                            ] ;
+            rdfs:comment "A place which draws visitors by providing something of interest or pleasure."@en ;
+            rdfs:label "Attraction"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachAttraction
+:BeachAttraction rdf:type owl:Class ;
+                 rdfs:subClassOf :Attraction ;
+                 rdfs:comment "A strip of land covered with sand, shingle, or small stones at the edge of a body of water, especially by the sea between high- and low-water marks."@en ;
+                 rdfs:label "Beach Attraction"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BeachHotel
+:BeachHotel rdf:type owl:Class ;
+            rdfs:subClassOf <https://schema.org/Hotel> ;
+            rdfs:comment "A hotel located near a beach."@en ;
+            rdfs:label "Beach Hotel"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BicycleTransport
+:BicycleTransport rdf:type owl:Class ;
+                  rdfs:subClassOf :Transport ;
+                  rdfs:comment "Transport service based on a vehicle consisting of two wheels held in a frame one behind the other, propelled by pedals and steered with handlebars attached to the front wheel."@en ;
+                  rdfs:label "Bicycle Transport"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusTransport
+:BusTransport rdf:type owl:Class ;
+              rdfs:subClassOf :Transport ;
+              rdfs:comment "Transport service based on a large motor vehicle carrying passengers by road, typically one serving the public on a fixed route and for a fare."@en ;
+              rdfs:label "Bus Transport"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#BusinessHotel
+:BusinessHotel rdf:type owl:Class ;
+               rdfs:subClassOf <https://schema.org/Hotel> ;
+               rdfs:comment "A hotel specialized in providing services to travelers on business trips."@en ;
+               rdfs:label "Business Hotel"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CheapHotel
+:CheapHotel rdf:type owl:Class ;
+            rdfs:subClassOf <https://schema.org/Hotel> ;
+            rdfs:comment "Cheap hotels, <146 cost of price per night."@en ;
+            rdfs:label "Cheap Hotel"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Company
+:Company rdf:type owl:Class ;
+         rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
+         rdfs:comment "A commercial business."@en ;
+         rdfs:label "Company"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalAttraction
+:CulturalAttraction rdf:type owl:Class ;
+                    rdfs:subClassOf :Attraction ;
+                    rdfs:comment "An attraction related to the ideas, customs, and social behaviour of a society."@en ;
+                    rdfs:label "Cultural Attraction"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#CulturalEvent
+:CulturalEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event ;
+               rdfs:comment "An event related to the ideas, customs, and social behaviour of a society."@en ;
+               rdfs:label "Cultural Event"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :eventIsIn ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass <https://dbpedia.org/page/City>
+                       ] ;
+       rdfs:comment "A planned public or social occasion."@en ;
+       rdfs:label "Event"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#GastronomyEvent
+:GastronomyEvent rdf:type owl:Class ;
+                 rdfs:subClassOf :Event ;
+                 rdfs:comment "An event related to or using gastronomy."@en ;
+                 rdfs:label "Gastronomy Event"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighRatedHotel
+:HighRatedHotel rdf:type owl:Class ;
+                rdfs:subClassOf <https://schema.org/Hotel> ;
+                rdfs:comment "Highly rated hotels, rating >4.3." ;
+                rdfs:label "High Rated Hotel"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#HighStarHotel
+:HighStarHotel rdf:type owl:Class ;
+               rdfs:subClassOf <https://schema.org/Hotel> ;
+               rdfs:comment "Hotels with high stars, > 4"@en ;
+               rdfs:label "High Star Hotel"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ItalianRestaurant
+:ItalianRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant ;
+                   rdfs:comment "A restaurant that primarily serves dishes of Italian cuisine."@en ;
+                   rdfs:label "Italian Restaurant"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#JapaneseRestaurant
+:JapaneseRestaurant rdf:type owl:Class ;
+                    rdfs:subClassOf :Restaurant ;
+                    rdfs:comment "A restaurant that primarily serves dishes of Japanese cuisine."@en ;
+                    rdfs:label "Japanese Restaurant"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#LuxuryHotel
+:LuxuryHotel rdf:type owl:Class ;
+             rdfs:subClassOf <https://schema.org/Hotel> ;
+             rdfs:comment "A hotel of great comfort or elegance, especially when involving great expense."@en ;
+             rdfs:label "Luxury Hotel"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MediterraneanRestaurant
+:MediterraneanRestaurant rdf:type owl:Class ;
+                         rdfs:subClassOf :Restaurant ;
+                         rdfs:comment "A restaurant that primarily serves dishes of Mediterranean cuisine."@en ;
+                         rdfs:label "Mediterranean Restaurant"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MexicanRestaurant
+:MexicanRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant ;
+                   rdfs:comment "A restaurant that primarily serves dishes of Mexican cuisine."@en ;
+                   rdfs:label "Mexican Restaurant"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MonumentAttraction
+:MonumentAttraction rdf:type owl:Class ;
+                    rdfs:subClassOf :Attraction ;
+                    rdfs:comment "A statue, building, or other structure erected to commemorate a notable person or event."@en ;
+                    rdfs:label "Monument Attraction"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MuseumAttraction
+:MuseumAttraction rdf:type owl:Class ;
+                  rdfs:subClassOf :Attraction ;
+                  rdfs:comment "A building in which objects of historical, scientific, artistic, or cultural interest are stored and exhibited."@en ;
+                  rdfs:label "Museum Attraction"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#MusicEvent
+:MusicEvent rdf:type owl:Class ;
+            rdfs:subClassOf :Event ;
+            rdfs:comment "An event related to or using music."@en ;
+            rdfs:label "Music Event"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#ParkAttraction
+:ParkAttraction rdf:type owl:Class ;
+                rdfs:subClassOf :Attraction ;
+                rdfs:comment "A large public garden or area of land used for recreation."@en ;
+                rdfs:label "Park Attraction"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :restaurantIsIn ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass <https://dbpedia.org/page/City>
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :restaurantRating ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:decimal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :restaurantRating ;
+                              owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:decimal
+                            ] ;
+            rdfs:comment "A place where people pay to sit and eat meals that are cooked and served on the premises."@en ;
+            rdfs:label "Restaurant"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SportsEvent
+:SportsEvent rdf:type owl:Class ;
+             rdfs:subClassOf :Event ;
+             rdfs:comment "An event related to or using sports."@en ;
+             rdfs:label "Sports Event"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#SubwayTransport
+:SubwayTransport rdf:type owl:Class ;
+                 rdfs:subClassOf :Transport ;
+                 rdfs:comment "Transport service based on a railway system in which electric trains travel through tunnels below ground."@en ;
+                 rdfs:label "Subway Transport"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TaxiTransport
+:TaxiTransport rdf:type owl:Class ;
+               rdfs:subClassOf :Transport ;
+               rdfs:comment "Transport service based on a motor vehicle licensed to transport passengers in return for payment of a fare and typically fitted with a taximeter."@en ;
+               rdfs:label "Taxi Transport"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TechnologyEvent
+:TechnologyEvent rdf:type owl:Class ;
+                 rdfs:subClassOf :Event ;
+                 rdfs:comment "An event related to or using technology."@en ;
+                 rdfs:label "Technology Event"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TouristicHotel
+:TouristicHotel rdf:type owl:Class ;
+                rdfs:subClassOf <https://schema.org/Hotel> ;
+                rdfs:comment "A hotel specialized in providing services to tourists."@en ;
+                rdfs:label "Touristic Hotel"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#TramTransport
+:TramTransport rdf:type owl:Class ;
+               rdfs:subClassOf :Transport ;
+               rdfs:comment "Transport service based on a passenger vehicle powered by electricity conveyed by overhead cables, and running on rails laid in a public road."@en ;
+               rdfs:label "Tram Transport"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Transport
+:Transport rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :company ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Company
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :transportIsIn ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass <https://dbpedia.org/page/City>
+                           ] ;
+           rdfs:comment "A system or means of conveying people or goods from place to place."@en ;
+           rdfs:label "Transport"@en .
+
+
+###  http://xmlns.com/foaf/0.1/Organization
+<http://xmlns.com/foaf/0.1/Organization> rdf:type owl:Class ;
+                                         rdfs:comment "The Organization class represents a kind of Agent corresponding to social instititutions such as companies, societies etc."@en ;
+                                         rdfs:label "Organization"@en .
+
+
+###  https://dbpedia.org/page/City
+<https://dbpedia.org/page/City> rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasAttraction ;
+                                                  owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass :Attraction
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasEvent ;
+                                                  owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass :Event
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasHotel ;
+                                                  owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass <https://schema.org/Hotel>
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasRestaurant ;
+                                                  owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass :Restaurant
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasTransport ;
+                                                  owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass :Transport
+                                                ] ;
+                                rdfs:comment "A city is a large human settlement. It can be defined as a permanent and densely settled place with administratively defined boundaries whose members work primarily on non-agricultural tasks. Cities generally have extensive systems for housing, transportation, sanitation, utilities, land use, production of goods, and communication. Their density facilitates interaction between people, government organisations and businesses, sometimes benefiting different parties in the process, such as improving efficiency of goods and service distribution. Historically, city-dwellers have been a small proportion of humanity overall, but following two centuries of unprecedented and rapid urbanization, more than half of the world population now lives in cities, which has had profound consequences for global sustainability. Present-day cities usually form the core of larger metropolitan areas and urban areas—creating numerous commuters traveling towards city centres for employment, entertainment, and education. However, in a world of intensifying globalization, all cities are to varying degrees also connected globally beyond these regions. This increased influence means that cities also have significant influences on global issues, such as sustainable development, global warming, and global health. Because of these major influences on global issues, the international community has prioritized investment in sustainable cities through Sustainable Development Goal 11. Due to the efficiency of transportation and the smaller land consumption, dense cities hold the potential to have a smaller ecological footprint per inhabitant than more sparsely populated areas. Therefore, compact cities are often referred to as a crucial element of fighting climate change. However, this concentration can also have significant negative consequences, such as forming urban heat islands, concentrating pollution, and stressing water supplies and other resources. Other important traits of cities besides population include the capital status and relative continued occupation of the city. For example, country capitals such as Beijing, London, Mexico City, Moscow, Nairobi, New Delhi, Paris, Rome, Athens, Seoul, Singapore, Tokyo, Manila, and Washington, D.C. reflect the identity and apex of their respective nations. Some historic capitals, such as Kyoto and Xi'an, maintain their reflection of cultural identity even without modern capital status. Religious holy sites offer another example of capital status within a religion, Jerusalem, Mecca, Varanasi, Ayodhya, Haridwar and Prayagraj each hold significance."@en ;
+                                rdfs:label "City"@en .
+
+
+###  https://schema.org/Hotel
+<https://schema.org/Hotel> rdf:type owl:Class ;
+                           rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hotelIsIn ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass <https://dbpedia.org/page/City>
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hotelRating ;
+                                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:decimal
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :stars ;
+                                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:integer
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hotelRating ;
+                                             owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:decimal
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :stars ;
+                                             owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:integer
+                                           ] ;
+                           rdfs:comment "A hotel is an establishment that provides lodging paid on a short-term basis."@en ;
+                           rdfs:label "Hotel"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Castell_Toledo
+:Castell_Toledo rdf:type owl:NamedIndividual ,
+                         :MonumentAttraction ;
+                :attractionIsIn :Toledo ;
+                :attractionName "Castell Toledo" ;
+                :attractionRating 3.7 ;
+                rdfs:comment "A castle in Toledo."@en ;
+                rdfs:label "Castell Toledo"@ca .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Festival_Madrid
+:Festival_Madrid rdf:type owl:NamedIndividual ,
+                          :GastronomyEvent ;
+                 :eventIsIn :Madrid ;
+                 :date "2024-01-12"^^xsd:date ;
+                 :eventName "Festival Madrid" ;
+                 rdfs:comment "A Madrid festival."@en ;
+                 rdfs:label "Festival Madrid"@ca .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Fira_Toledo
+:Fira_Toledo rdf:type owl:NamedIndividual ,
+                      :SportsEvent ;
+             :eventIsIn :Toledo ;
+             :date "2024-08-26"^^xsd:date ;
+             :eventName "Fira Toledo" ;
+             rdfs:comment "A fair in Toledo."@en ;
+             rdfs:label "Fira Toledo"@ca .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Del_Mar_Toledo
+:Hotel_Del_Mar_Toledo rdf:type owl:NamedIndividual ,
+                               :BeachHotel ;
+                      :hotelIsIn :Toledo ;
+                      :hotelRating 4.3 ;
+                      :orgName "Hotel Del Mar Toledo" ;
+                      :pricePerNight 145 ;
+                      :stars 5 ;
+                      rdfs:comment "A hotel in Toledo."@en ;
+                      rdfs:label "Hotel Del Mar Toledo"@ca .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Hotel_Royal_Madrid
+:Hotel_Royal_Madrid rdf:type owl:NamedIndividual ,
+                             :BusinessHotel ;
+                    :hotelIsIn :Madrid ;
+                    :hotelRating 4.4 ;
+                    :orgName "Hotel Royal Madrid" ;
+                    :pricePerNight 146 ;
+                    :stars 3 ;
+                    rdfs:comment "A hotel in Madrid."@en ;
+                    rdfs:label "Hotel Royal Madrid"@es .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Madrid
+:Madrid rdf:type owl:NamedIndividual ,
+                 <https://dbpedia.org/page/City> ;
+        :hasAttraction :Museu_Madrid ;
+        :hasEvent :Festival_Madrid ;
+        :hasHotel :Hotel_Royal_Madrid ;
+        :hasRestaurant :Restaurant_Gourmet_Madrid ;
+        :hasTransport :Subway_Madrid ;
+        :cityName "Madrid" ;
+        :location "39.4699,-0.3763" ;
+        rdfs:comment "City of Madrid."@en ;
+        rdfs:label "Madrid"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Museu_Madrid
+:Museu_Madrid rdf:type owl:NamedIndividual ,
+                       :MuseumAttraction ;
+              :attractionIsIn :Madrid ;
+              :attractionName "Museu Madrid" ;
+              :attractionRating 3.7 ;
+              rdfs:comment "A museum in Madrid."@en ;
+              rdfs:label "Museu Madrid"@ca .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Gourmet_Madrid
+:Restaurant_Gourmet_Madrid rdf:type owl:NamedIndividual ,
+                                    :JapaneseRestaurant ;
+                           :restaurantIsIn :Madrid ;
+                           :orgName "Restaurant Gourmet Madrid" ;
+                           :restaurantAvgPrice 30 ;
+                           :restaurantRating 4.8 ;
+                           rdfs:comment "A restaurant in Madrid."@en ;
+                           rdfs:label "Restaurant Gourmet Madrid"@ca .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Restaurant_Tradicio_Toledo
+:Restaurant_Tradicio_Toledo rdf:type owl:NamedIndividual ,
+                                     :MexicanRestaurant ;
+                            :restaurantIsIn :Toledo ;
+                            :orgName "Restaurant Tradicio Toledo" ;
+                            :restaurantAvgPrice 46 ;
+                            :restaurantRating 3.7 ;
+                            rdfs:comment "A restaurant in Toledo."@en ;
+                            rdfs:label "Restaurant Tradicio Toledo"@ca .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Subway_Madrid
+:Subway_Madrid rdf:type owl:NamedIndividual ,
+                        :SubwayTransport ;
+               :company :Urban_Madrid ;
+               :transportIsIn :Madrid ;
+               :transportAvgPrice 8.85 ;
+               rdfs:comment "Subway system in Madrid."@en ;
+               rdfs:label "Subway Madrid"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Toledo
+:Toledo rdf:type owl:NamedIndividual ,
+                 <https://dbpedia.org/page/City> ;
+        :hasAttraction :Castell_Toledo ;
+        :hasEvent :Fira_Toledo ;
+        :hasHotel :Hotel_Del_Mar_Toledo ;
+        :hasRestaurant :Restaurant_Tradicio_Toledo ;
+        :hasTransport :Tram_Toledo ;
+        :cityName "Toledo" ;
+        :location "39.8628,-4.0273" ;
+        rdfs:comment "City of Toledo."@en ;
+        rdfs:label "Toledo"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Tram_Toledo
+:Tram_Toledo rdf:type owl:NamedIndividual ,
+                      :TramTransport ;
+             :company :Trans_Toledo ;
+             :transportIsIn :Toledo ;
+             :transportAvgPrice 3.61 ;
+             rdfs:comment "Tram system in Toledo."@en ;
+             rdfs:label "Tram Toledo"@en .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Trans_Toledo
+:Trans_Toledo rdf:type owl:NamedIndividual ,
+                       :Company ;
+              :orgName "Trans Toledo" ;
+              rdfs:comment "Tram transport company in Toledo"@en ;
+              rdfs:label "Trans Toledo"@ca .
+
+
+###  http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology#Urban_Madrid
+:Urban_Madrid rdf:type owl:NamedIndividual ,
+                       :Company ;
+              :orgName "Urban Madrid" ;
+              rdfs:comment "Subway transport company in Madrid."@en ;
+              rdfs:label "Urban Madrid"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Attraction
+                :Event
+                :Transport
+                <http://xmlns.com/foaf/0.1/Organization>
+                <https://dbpedia.org/page/City>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Company
+                :Restaurant
+                <https://schema.org/Hotel>
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/s> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Checks for high rated hotels." ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hotelRating ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/r> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 4.3 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://schema.org/Hotel> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighRatedHotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Checks for cheap hotels." ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                    rdf:first <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/p> ;
+                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                               rdf:first 146 ;
+                                                                                                               rdf:rest rdf:nil
+                                                                                                             ]
+                                                                                                  ]
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> <https://schema.org/Hotel> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :pricePerNight ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/p>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CheapHotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Checks for hotels with high stars." ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                    rdf:first <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/s> ;
+                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                               rdf:first 4 ;
+                                                                                                               rdf:rest rdf:nil
+                                                                                                             ]
+                                                                                                  ]
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :stars ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/s>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <https://schema.org/Hotel> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighStarHotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/eric/ontologies/2025/3/SmartTourismAdvisorOntology/h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
